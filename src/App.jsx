@@ -5,3 +5,7 @@ const App =()=>{
 }
 
 export default App;
+
+/*
+creating command in day2
+*/
