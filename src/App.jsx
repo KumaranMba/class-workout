@@ -8,7 +8,7 @@
 
 
 
-// create another same method
+// create another same method using named function
 // function App(){
 
 //   const now = new Date();
@@ -27,22 +27,46 @@
 
 // Adding multiple components
 
-function Hello(){
+// function Hello(){
+//   return(
+//     <p>Hello world</p>
+//   )
+// }
+
+
+// function App(){
+//   return(
+//     <div>
+//       <h3>Greetings</h3>
+//       <Hello/>
+//       <Hello/>
+//       <Hello/>
+//       <Hello/>
+//       </div>
+//   )
+// }
+
+// export default App;
+
+// Adding properties to function
+
+
+function Hello(name){
+  console.log(name);
   return(
-    <p>Hello world</p>
+    <p>Hello {name.username}</p>
   )
 }
-
-
 function App(){
+
+  let user1 ='dinesh';
+  let user2 ='kumaran';
   return(
     <div>
       <h3>Greetings</h3>
-      <Hello/>
-      <Hello/>
-      <Hello/>
-      <Hello/>
-      </div>
+      <Hello username ={user1}/>
+      <Hello username ={user2}/>
+    </div>
   )
 }
 
