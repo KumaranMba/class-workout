@@ -1,18 +1,19 @@
 
 import React from 'react'
-
+import Notes from './Components/Notes';
 function App({notes}) {
 //  const notes = props.notes;
 //   const {notes} =props;
-  console.log(notes);
+  
   return (
     <div>
         <h1>Notes</h1>
         <ul>{
             notes.map(note=>
-                <li key= {note.id}>{note.content}</li>)
-
-            }</ul>
+            <Notes key={note.id} note={note}/>
+             )
+            }
+        </ul>
     </div>
   )
 }
