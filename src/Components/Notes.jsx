@@ -3,15 +3,10 @@ import React from 'react'
 
 function Notes({note}) {
 
-  if(note.important){
-    return(
-      <li>{note.content}★</li>
-    )
-  }
-  
+   
   return (
     
-    <li>{note.content}</li>
+    <li>{note.important ? note.content +'★':note.content}</li>
   )
   
 }
