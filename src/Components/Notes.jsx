@@ -6,7 +6,7 @@ function Notes({note}) {
    
   return (
     
-    <li>{note.important ? note.content +'★':note.content}</li>
+    <li>{note.content} {note.important && '★' }</li>
   )
   
 }
