@@ -1,6 +1,9 @@
 
 import React from 'react'
 import Notes from './Components/Notes';
+import'./style/App.css';
+
+
 function App({notes}) {
 //  const notes = props.notes;
 //   const {notes} =props;
