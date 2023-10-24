@@ -1,20 +1,16 @@
-import React from 'react'
+//rce for creating class component
 
-function Hello({name}){
-  return(
-    <div>
-      <p>Hello {name}!</p>
-    </div>
-  )
-}
+import React, { Component } from 'react';
 
-
-function App() {
-  return (
-    <div>
-     <Hello name='Dinesh'/>
-    </div>
-  )
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <p>Hello world!</p>
+      </div>
+    )
+  }
 }
 
 export default App;
+
