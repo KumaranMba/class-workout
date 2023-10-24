@@ -2,11 +2,21 @@
 
 import React, { Component } from 'react';
 
+class Hello extends Component{
+  render(){
+    return(
+      <p>Hello world!</p>
+    )
+  }
+}
+
+
+
 class App extends Component {
   render() {
     return (
       <div>
-        <p>Hello world!</p>
+        <Hello/>
       </div>
     )
   }
