@@ -4,7 +4,11 @@ import Notes from './Components/Notes';
 function App({notes}) {
 //  const notes = props.notes;
 //   const {notes} =props;
-  
+  const addNote = (event)=>{
+    event.preventDefault();
+    console.log('button clicked',event.target);
+  }  
+
   return (
     <div>
         <h1>Notes</h1>
@@ -14,6 +18,11 @@ function App({notes}) {
              )
             }
         </ul>
+
+        <form onSubmit={addNote}>
+          <input/>
+          <button type='submit'>SaveNotes</button>
+        </form>
     </div>
   )
 }
