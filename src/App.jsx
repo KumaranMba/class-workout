@@ -1,25 +1,20 @@
-//Functional component
-//created as javascript functions
-//it should return the jsx=>Html with javascript embaded.
+import React from 'react'
 
-// function App() {
-//   return (
-//     <div>Hello World!</div>
-//   )
-// }
+function Hello({name}){
+  return(
+    <div>
+      <p>Hello {name}!</p>
+    </div>
+  )
+}
 
-// export default App;
 
-//--------------------------------------------------//
-
-// Class component
-import { Component } from "react"; // automatically received from the react library.
-class App extends Component{
-  render(){
-    return(
-      <div>Hello world!</div>
-    )
-  }
+function App() {
+  return (
+    <div>
+     <Hello name='Dinesh'/>
+    </div>
+  )
 }
 
 export default App;
