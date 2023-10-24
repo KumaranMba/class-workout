@@ -4,10 +4,9 @@ import Notes from './Components/Notes';
 function App({notes}) {
 //  const notes = props.notes;
 //   const {notes} =props;
-  const addNote = (event)=>{
-    event.preventDefault();
-    console.log('button clicked',event.target);
-  }  
+ function handleSaveClick(){
+  console.log('save button clicked');
+ }
 
   return (
     <div>
@@ -19,9 +18,10 @@ function App({notes}) {
             }
         </ul>
 
-        <form onSubmit={addNote}>
+        <form >
           <input/>
-          <button type='submit'>SaveNotes</button>
+          <button onClick={handleSaveClick} >SaveNotes
+          </button>
         </form>
     </div>
   )
