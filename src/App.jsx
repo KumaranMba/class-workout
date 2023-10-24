@@ -20,7 +20,9 @@ function App({notes}) {
 
         <form >
           <input/>
-          <button onClick={handleSaveClick} >SaveNotes
+          <button onClick ={
+            () =>console.log("Save button clicked")
+          } >SaveNotes
           </button>
         </form>
     </div>
