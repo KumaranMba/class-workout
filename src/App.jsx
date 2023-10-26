@@ -12,6 +12,7 @@ class App extends Component {
 
   constructor(props){
     super(props);// to call the parent class constructor.
+
     // define the state
     this.state={
       count:0      
@@ -19,11 +20,22 @@ class App extends Component {
 
   }  
 
-  increment = ()=>{
+ increment = ()=>{
     // update the state (data) of the count
     this.setState({
       // provide the new state
-      count:this.state.count+1
+      count:this.state.count+1,
+    })
+  }
+  decrement =()=>{
+    this.setState({
+      count:this.state.count-1,
+    })
+  }
+
+  reset =()=>{
+    this.setState({
+      count:0,
     })
   }
 
@@ -31,8 +43,10 @@ class App extends Component {
     return (
       <div>
         <p>Count :{this.state.count}</p>
-        <button onClick ={this.increment}>Increment</button>
-      </div>
+        <button onClick = {this.increment}>Increment</button>
+        <button onClick={this.decrement}>Decrement</button>
+        <button onClick={this.reset}>reset</button>
+        </div>
     )
   }
 }
