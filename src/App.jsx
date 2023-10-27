@@ -11,12 +11,14 @@ import React, { useState } from 'react';
 
 function App() {
  const[counter,setCounter] = useState(0);
-  setTimeout(()=>{
-    setCounter(counter+1)
-  },1000)
-  console.log('render',counter);
+ function plusbuttonclick(){
+  setCounter(counter+1);
+ }
   return (
-    <div>App</div>
+    <div>
+      <p>counter:{ counter }</p>
+      <button onClick={plusbuttonclick}>Plus</button>
+    </div>
   )
 }
 
