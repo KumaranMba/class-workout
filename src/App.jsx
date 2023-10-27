@@ -1,72 +1,22 @@
-// const App =()=>{
-//   return(
-//     <p>Hello world!</p>
-//   )
-// }
-
-// export default App;
-
+/*
+what is Hook?
+- any function that start with "use" is called a hook.
+- they are special functions that are avaliable only while React is rendering.
+- To create a counter, where the value is increased as a function of time or at the click of the button.
+*/ 
 
 
-// create another same method using named function
-// function App(){
 
-//   const now = new Date();
-//   console.log(now);
-//   const a =10;
-//   const b =20;
- 
-//   return(
-//     <div>
-//       <p>Hello world, it is {now.toString()}</p>
-//       <p> {a} plus {b} is {a+b}</p>
-//     </div>
-//   )
-//   }
-// export  default App;
+import React, { useState } from 'react';
 
-// Adding multiple components
-
-// function Hello(){
-//   return(
-//     <p>Hello world</p>
-//   )
-// }
-
-
-// function App(){
-//   return(
-//     <div>
-//       <h3>Greetings</h3>
-//       <Hello/>
-//       <Hello/>
-//       <Hello/>
-//       <Hello/>
-//       </div>
-//   )
-// }
-
-// export default App;
-
-// Adding properties to function
-
-
-function Hello(name){
-  console.log(name);
-  return(
-    <p>Hello {name.username}</p>
-  )
-}
-function App(){
-
-  let user1 ='dinesh';
-  let user2 ='kumaran';
-  return(
-    <div>
-      <h3>Greetings</h3>
-      <Hello username ={user1}/>
-      <Hello username ={user2}/>
-    </div>
+function App() {
+ const[counter,setCounter] = useState(0);
+  setTimeout(()=>{
+    setCounter(counter+1)
+  },1000)
+  console.log('render',counter);
+  return (
+    <div>App</div>
   )
 }
 
