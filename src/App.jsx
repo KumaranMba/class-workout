@@ -7,10 +7,13 @@ what is Hook?
 
 import React from 'react';
 import { useState } from 'react';
+import Displaycount from './Components/Displaycount';
+import Button from './Components/button';
+
 
 function App() {
   const[counter,setCounter] = useState(0);
-  function handleclick(){
+  function handleplusclick(){
     setCounter(counter+1);
 
   }
@@ -23,10 +26,10 @@ function App() {
   }
   return (
     <div>
-      <p> counter:{counter} </p>
-      <button onClick={handleclick}>plus</button>
-      <button onClick={Minusbuttonclick}>Minus</button>
-      <button onClick={zerobuttonclick}>Zero</button>
+      <Displaycount counter ={counter}/>
+      <Button handleclick={handleplusclick} name='plus'/>
+      <Button handleclick={Minusbuttonclick} name='minus'/>
+      <Button handleclick={zerobuttonclick} name='zero'/>
       </div>
   )
 }
