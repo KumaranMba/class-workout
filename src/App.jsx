@@ -1,51 +1,23 @@
-/*
--useEffect is a hook
- useEffect is used in functional component in react to manage the side effect.
- [data fetching, Dom manipulation,subscriptions]
-
-*/
-
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 function App() {
-  const fetchposts = async ()=>{
-  let response = await fetch(`https://jsonplaceholder.typicode.com/posts`)
-  let data = await response.json();
-  setPosts(data);
+
+  const [count,setCount]=useState(0);
+ 
+  useEffect(()=>{
+    document.title = `count:${count}`
+  },[count])
+
+  const handleclick=()=> {
+    setCount(count + 1)
+  }
   
- }
-
-  //create a state to store the data fetched from the API.
-
-  const[posts,setPosts]=useState(null);
-
-
-
-  // Data has to be fetch.
-  // the following will run only once.
- 
-useEffect(()=>{
-fetchposts();
-},[])
- 
   return (
     <div>
-      <h2>API Data</h2>
-    {
-      posts? (
-        <ul>
-        {
-          posts.map(post=>
-            <li key={post.id}>{post.title}</li>
-          )
-        }
-        
-       </ul>
-      ):(
-        <p>Fetching data...</p>
-      )
-    }
-    
+      <h2>Document title</h2>
+      <button onClick={ handleclick }>Change count</button>
     </div>
   )
 }
